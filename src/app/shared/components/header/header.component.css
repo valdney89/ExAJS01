@@ -1,0 +1,15 @@
+ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.mat-toolbar {
+  justify-content: space-between;
+}

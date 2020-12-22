@@ -1,0 +1,25 @@
+<div class="container">
+  <div [formGroup]="itensForm">
+    <h3>Cadastrar Item na Lista:</h3>
+    <div class="item-field">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="name" placeholder="Informe o item" />
+      </mat-form-field>
+      <button mat-button color="primary" (click)="addItem()">
+        Adicionar Item
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <h3>Lista AJS:</h3>
+    <small>Info: DoubleClick para excluir!</small>
+    <mat-list role="list">
+      <mat-list-item *ngFor="let item of list" role="{{ item.name }}">
+        <p (dblclick)="removeItem(item.id)">{{ item.name }}</p>
+        <mat-divider [vertical]="true"></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
